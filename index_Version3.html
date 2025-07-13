@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Techfest Enters the Upside Down</title>
+  <!-- Retro + glitch fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+  <div class="fog"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand glitch" data-text="Techfest">Techfest</div>
+    <div class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="lights">
+    <span class="light"></span><span class="light"></span><span class="light"></span>
+    <span class="light"></span><span class="light"></span><span class="light"></span>
+  </div>
+  <main>
+    <section id="home" class="section">
+      <h1 class="glitch main-title" data-text="Enter the Upside Down">Enter the Upside Down</h1>
+      <p>Welcome to Techfest IIT Bombay. Are you ready to escape the Upside Down?</p>
+    </section>
+    <section id="about" class="section">
+      <h2 class="glitch" data-text="Techfest meets Stranger Things?">Techfest meets Stranger Things?</h2>
+      <p>Discover a festival where innovation meets mystery, inspired by Hawkins, the Mind Flayer, and Eleven’s powers. Science, technology, and a dash of supernatural challenge!</p>
+    </section>
+    <section id="experiments" class="section">
+      <h2 class="glitch" data-text="Experiments">Experiments</h2>
+      <ul>
+        <li>Escape the Upside Down – Problem Solving Event</li>
+        <li>Hawkins Lab Showcase – Innovation Gallery</li>
+        <li>Mind Flayer Control Panel – AI/ML Workshop</li>
+      </ul>
+    </section>
+    <section id="timeline" class="section">
+      <h2 class="glitch" data-text="The Rift opens in...">The Rift opens in...</h2>
+      <ul>
+        <li>Day 1: Portal Opening Ceremony</li>
+        <li>Day 2: Experiments & Workshops</li>
+        <li>Day 3: Upside Down Escape Game Finale</li>
+      </ul>
+    </section>
+    <section id="contact" class="section">
+      <h2 class="glitch" data-text="Talk via Lights">Talk via Lights</h2>
+      <p>
+        <span class="demogorgon-icon">👹</span>
+        Email: <a href="mailto:techfest@iitb.ac.in">techfest@iitb.ac.in</a>
+      </p>
+      <p>
+        <span class="demogorgon-icon">👹</span>
+        Morse-style Contact: <span class="morse">. - . - .</span>
+      </p>
+    </section>
+  </main>
+  <script>
+    // Hamburger menu
+    document.getElementById('hamburger').onclick = function() {
+      document.getElementById('nav-links').classList.toggle('active');
+    };
+    // Glitch effect: duplicate text, CSS handles animation
+    document.querySelectorAll('.glitch').forEach(el => {
+      el.innerHTML = `<span>${el.dataset.text}</span>${el.innerHTML}`;
+    });
+    // Custom cursor
+    document.body.style.cursor = 'url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2730%27 height=%2730%27><circle cx=%2715%27 cy=%2715%27 r=%2713%27 fill=%27%23e50914%27 opacity=%270.45%27/><rect x=%2712%27 y=%271%27 width=%276%27 height=%2720%27 fill=%27%23e50914%27 opacity=%270.8%27/></svg>") 15 15, auto';
+  </script>
+</body>
+</html>
